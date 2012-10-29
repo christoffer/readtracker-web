@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>ReadTracker 3</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+  <style>
+
+    @-webkit-keyframes rotate {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      background: black;
+    }
+
+    h1 {
+      margin-top: 20%;
+      margin-bottom: -110px;
+      color: white;
+      text-align: center;
+      opacity: 0.0;
+
+      -webkit-animation-name:             fadein;
+      -webkit-animation-duration:         3.0s;
+      -webkit-animation-delay:            0.5s;
+      -webkit-animation-fill-mode:        forwards;
+    }
+
+    #circle {
+      opacity: 0.5;
+      margin: 0 auto;
+      height: 190px;
+      width: 190px;
+      background: url('images/circle.png') no-repeat 50% 50%;
+      background-size: 100% 100%;
+
+      -webkit-animation-name:             rotate;
+      -webkit-animation-duration:         60.0s;
+      -webkit-animation-iteration-count:  infinite;
+      -webkit-transition-timing-function: linear;
+    }
+
+    #version {
+      opacity: 0;
+      text-shadow: 1px 1px 3px white;
+      -webkit-animation-name:             fadein;
+      -webkit-animation-duration:         6.0s;
+      -webkit-animation-delay:            2s;
+      -webkit-animation-fill-mode:        forwards;
+      -webkit-animation-fill-mode:        forwards;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>ReadTracker <span id="version">3</span></h1>
+  <div id="circle"></div>
+</body>
+</html>

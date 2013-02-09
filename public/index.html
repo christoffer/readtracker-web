@@ -1,48 +1,58 @@
 <html>
 <head>
   <title>ReadTracker 3</title>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Roboto:300' rel='stylesheet' type='text/css'>
   <style>
 
     @-webkit-keyframes rotate {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
     }
 
     @-webkit-keyframes fadein {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @-moz-keyframes rotate {
+      from { -moz-transform: rotate(0deg); }
+      to { -moz-transform: rotate(360deg); }
+    }
+
+    @-moz-keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     body {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Droid Sans', sans-serif;
       font-weight: 200;
-      background: black;
+      background: #111;
     }
 
-    h1 {
+    .header {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .tagline {
+      text-align: center;
+    }
+
+    .title {
       margin-top: 20%;
       margin-bottom: -110px;
       color: white;
       text-align: center;
-      opacity: 0.0;
+      opacity: 1.0;
 
       -webkit-animation-name:             fadein;
-      -webkit-animation-duration:         3.0s;
-      -webkit-animation-delay:            0.5s;
+      -webkit-animation-duration:         1.0s;
+      -webkit-animation-delay:            0.2s;
       -webkit-animation-fill-mode:        forwards;
     }
 
-    #circle {
-      opacity: 0.5;
+    .circle {
+      opacity: 1.5;
       margin: 0 auto;
       height: 190px;
       width: 190px;
@@ -53,23 +63,222 @@
       -webkit-animation-duration:         60.0s;
       -webkit-animation-iteration-count:  infinite;
       -webkit-transition-timing-function: linear;
+      -moz-animation-name:             rotate;
+      -moz-animation-duration:         60.0s;
+      -moz-animation-iteration-count:  infinite;
+      -moz-transition-timing-function: linear;
     }
 
-    #version {
+    .version {
       opacity: 0;
       text-shadow: 1px 1px 3px white;
-      -webkit-animation-name:             fadein;
-      -webkit-animation-duration:         6.0s;
-      -webkit-animation-delay:            2s;
-      -webkit-animation-fill-mode:        forwards;
-      -webkit-animation-fill-mode:        forwards;
+      -webkit-animation-name:          fadein;
+      -webkit-animation-duration:      6.0s;
+      -webkit-animation-delay:         1s;
+      -webkit-animation-fill-mode:     forwards;
+      -webkit-animation-fill-mode:     forwards;
+      -moz-animation-name:             fadein;
+      -moz-animation-duration:         6.0s;
+      -moz-animation-delay:            1s;
+      -moz-animation-fill-mode:        forwards;
+      -moz-animation-fill-mode:        forwards;
     }
 
+    .google-play {
+      margin: 40px auto;
+      display: block;
+      width: 172px;
+    }
+
+    body {
+      color: #eee;
+      font-size: 16px;
+    }
+
+    /* Mini reset */
+      html > * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      html, body, div, form, fieldset, legend, label
+      {
+         margin: 0;
+          padding: 0;
+      }
+
+      table
+      {
+         border-collapse: collapse;
+          border-spacing: 0;
+      }
+
+      th, td
+      {
+         text-align: left;
+          vertical-align: top;
+      }
+
+      h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+
+      img { border: 0; }
+
+      .feature:before, .feature:after { content: " "; display: table; }
+      .feature:after { clear: both; }
+      .feature {
+        *zoom: 1;
+        margin: 20px 0;
+      }
+
+      .screenshot {
+        width: 240px;
+        height: 400px;
+        display: block;
+        margin: 0 auto;
+        float: left;
+      }
+
+      .feature-description {
+        float: left;
+        max-width: 50%;
+        padding: 50px 20px 0;
+      }
+
+    /* End */
+
+    a, a:visited { color: #7bbae7; }
+    a:hover { color: #83c6f6; }
+    a:active { color: #679ac0; }
+
+    .centered {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .left {
+      text-align: left;
+    }
   </style>
 
 </head>
 <body>
-  <h1>ReadTracker <span id="version">3</span></h1>
-  <div id="circle"></div>
+  <div class="centered">
+    <div>
+      <h1 class="title header">ReadTracker <span class="version">3</span></h1>
+      <div class="circle"></div>
+    </div>
+
+    <header class="promo-box">
+      <a class="google-play" href="https://play.google.com/store/apps/details?id=com.readtracker">
+        <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+      </a>
+    </header>
+
+    <article class="faq">
+      <section class="left">
+        <h3 class="question">What is ReadTracker?</h3>
+        <p class="answer">
+          ReadTracker is a tool for syncing any book you read with your Readmill
+          account.
+        </p>
+
+        <h3 class="question">Well, what is Readmill then?</h3>
+        <div class="answer">
+          <p>
+            Readmill is a web service that helps you leave a trail of the books
+            you&rsquo;ve read and loved, together with highlights of the parts
+            that was most important to you. You can also follow other people and
+            see what they are reading, and which part they like the most.
+          </p>
+          <p>
+            If you see something you like, you can leave a comment or just
+            click a little heart to let them know you noticed.
+          </p>
+          <p>
+            Read more about Readmill <a href="https://readmill.com">here</a>
+          </p>
+        </div>
+
+        <h3 class="question">How does it work?</h3>
+        <div class="answer">
+          <p>
+          To use ReadTracker you first sign in to Readmill (if you want to use
+          that feature, it's optional) and then add your book into ReadTracker.
+          Either by searching for it on Google Books or entering it manually.
+          </p>
+          <p>
+          Once the book is added you simply open it up and click the Start
+          button to start timing your reading. Then you can put the app away
+          and read at your book, regardless if it's a book you hold in your hand or an app on your phone.
+          </p>
+          <p>
+          Once you've finished reading for this time, you click stop and
+          tell ReadTracker how far you came. If you finished the book you can
+          also enter a few words on what you thought about it that people who
+          follow you on Readmill can see.
+          </p>
+        </div>
+
+        <h3 class="question">What does it cost?</h3>
+        <div class="answer">
+          <p>
+            ReadTracker and Readmill are completely free. I would very much appreciate a few kind words about the app on <a href="https://play.google.com/store/apps/details?id=com.readtracker">Google Play</a> though, if you found the app useful.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <article class="features">
+      <h2>Features</h2>
+      <div class="feature">
+        <img class="screenshot" src="images/booklist.png" />
+        <div class="feature-description">
+          Keep a list of all your currently read books, to remind you that you are reading them, and to see how far you've come.
+        </div>
+      </div>
+
+      <div class="feature">
+        <img class="screenshot" src="images/sessions.png" />
+        <div class="feature-description">
+          See how much time you have left in your book, and get an estimate on how much you have to read each day to finish it within a certain timespan.
+          <p>Build up a trail of reading history to visualize your reading habits.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <img class="screenshot" src="images/track.png" />
+        <div class="feature-description">
+          Easily and non-intrusively track how long you read each time. Quickly
+          adjust the time if your mind races off into something else for a
+          while, and you want your tracking to still make sense.
+        </div>
+      </div>
+
+      <div class="feature">
+        <img class="screenshot" src="images/highlights.png" />
+        <div class="feature-description">
+          Keep highlights of the favorite parts of your book to give yourself a
+          quick recap of the story when you've finished the book. And share
+          them with friends and followers on Readmill.
+        </div>
+      </div>
+
+      <div class="feature">
+        <img class="screenshot" src="images/finished.png" />
+        <div class="feature-description">
+          Write down a few words the book after you've finished it. Either as mini reviews to other poeple,
+          or as a reminders to yourself of your thoughts right in the moment of finishing it.
+        </div>
+      </div>
+    </article>
+
+    <div class="google-play">
+      <a href="https://play.google.com/store/apps/details?id=com.readtracker">
+        <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+      </a>
+    </div>
+  </div>
 </body>
+
 </html>

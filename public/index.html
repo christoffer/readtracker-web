@@ -2,6 +2,19 @@
 <head>
   <title>ReadTracker 3</title>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Roboto:300' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38378605-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
   <style>
 
     @-webkit-keyframes rotate {
@@ -127,7 +140,36 @@
       .feature:after { clear: both; }
       .feature {
         *zoom: 1;
-        margin: 20px 0;
+        margin: 40px 0;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .features {
+        margin-top: 80px;
+      }
+
+      .question {
+        margin-top: 40px;
+      }
+
+      .feature-1 {
+        border-bottom: solid 1px #56804D;
+      }
+
+      .feature-2 {
+        border-bottom: solid 1px #9F1C24;
+      }
+
+      .feature-3 {
+        border-bottom: solid 1px #DEB02A;
+      }
+
+      .feature-4 {
+        border-bottom: solid 1px #457698;
+      }
+
+      .feature-5 {
+        border-bottom: solid 1px #56804D;
       }
 
       .screenshot {
@@ -223,7 +265,7 @@
         <h3 class="question">What does it cost?</h3>
         <div class="answer">
           <p>
-            ReadTracker and Readmill are completely free. I would very much appreciate a few kind words about the app on <a href="https://play.google.com/store/apps/details?id=com.readtracker">Google Play</a> though, if you found the app useful.
+          ReadTracker and Readmill are completely free. I would very much appreciate a few kind words <a href="https://play.google.com/store/apps/details?id=com.readtracker">in a review</a> though if you found the app useful.
           </p>
         </div>
       </section>
@@ -231,14 +273,14 @@
 
     <article class="features">
       <h2>Features</h2>
-      <div class="feature">
+      <div class="feature feature-1">
         <img class="screenshot" src="images/booklist.png" />
         <div class="feature-description">
           Keep a list of all your currently read books, to remind you that you are reading them, and to see how far you've come.
         </div>
       </div>
 
-      <div class="feature">
+      <div class="feature feature-2">
         <img class="screenshot" src="images/sessions.png" />
         <div class="feature-description">
           See how much time you have left in your book, and get an estimate on how much you have to read each day to finish it within a certain timespan.
@@ -246,7 +288,7 @@
         </div>
       </div>
 
-      <div class="feature">
+      <div class="feature feature-3">
         <img class="screenshot" src="images/track.png" />
         <div class="feature-description">
           Easily and non-intrusively track how long you read each time. Quickly
@@ -255,7 +297,7 @@
         </div>
       </div>
 
-      <div class="feature">
+      <div class="feature feature-4">
         <img class="screenshot" src="images/highlights.png" />
         <div class="feature-description">
           Keep highlights of the favorite parts of your book to give yourself a
@@ -264,7 +306,7 @@
         </div>
       </div>
 
-      <div class="feature">
+      <div class="feature feature-5">
         <img class="screenshot" src="images/finished.png" />
         <div class="feature-description">
           Write down a few words the book after you've finished it. Either as mini reviews to other poeple,
